@@ -1,0 +1,32 @@
+---
+- name: This is the cleanup for the find lab.
+  hosts: localhost
+  become: true
+  gather_facts: false
+  
+  tasks:
+    - name: Remove the user Bilbo
+      user:
+        name: Bilbo
+        state: absent
+        remove: yes
+        
+    - name: Remove Precious file
+      file:
+        path: /tmp/Precious
+        state: absent
+
+    - name: Remove Ring file
+      file:
+        path: /bin/Ring
+        state: absent
+
+    - name: Remove Precious2 file
+      file:
+        path: /var/log/Precious2
+        state: absent
+        
+    - name: Remove Cursed file
+      file:
+        path: /etc/Cursed
+        state: absent
