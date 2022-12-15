@@ -29,9 +29,3 @@
       yum:
         name: cups
         state: present
-
-    - name: Remove container-tools
-      shell: yum module remove container-tools -y
-
-    - name: Reset container-tools
-      shell: yum module reset container-tools -y
