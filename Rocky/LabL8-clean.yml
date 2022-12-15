@@ -9,42 +9,50 @@
         name: httpd
         state: absent
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         service: https
         permanent: yes
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         port: 443/tcp
         permanent: yes
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         service: http
         permanent: yes
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         port: 80/tcp
         permanent: yes
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         service: https
         permanent: no
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         port: 443/tcp
         permanent: no
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         service: http
         permanent: no
         state: disabled
 
-    - firewalld:
+    - name: Firewall stuff
+      firewalld:
         port: 80/tcp
         permanent: no
         state: disabled
