@@ -1,5 +1,6 @@
 ---
-- name: This cleans up Lesson 7 Topic A Lab
+- name: This cleans up Lesson 7 Topic A Lab\
+  hosts: localhost
   become: true
   tasks:
     - name: Remove Packages directory
