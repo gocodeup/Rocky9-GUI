@@ -1,5 +1,6 @@
 ---
 - name: This sets up Lesson 7 Topic A Lab
+  hosts: localhost
   become: true
   tasks:
     - name: Create Packages directory
@@ -9,5 +10,5 @@
         mode: '0777'
     - name: Download software packages
       get_url:
-        url: http://mirror.centos.org/centos/7/os/x86_64/Packages/ksh-20120801-142.el7.x86_64.rpm
-        dest: /Packages/ksh-20120801-142.el7.x86_64.rpm
+        url: https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/k/ksh-1.0.0~beta.1-2.el9.x86_64.rpm
+        dest: /Packages/ksh-1.0.0~beta.1-2.el9.x86_64.rpm
