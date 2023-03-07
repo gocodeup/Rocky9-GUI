@@ -87,3 +87,8 @@
       file:
         path: /.rootprofilecopy
         state: absent
+
+    - name: Remove files
+      file:
+        path: /Zoo
+        state: absent
