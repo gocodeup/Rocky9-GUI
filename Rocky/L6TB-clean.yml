@@ -1,11 +1,11 @@
 ---
-- name: This cleans up Lab 12
+- name: This cleans up Lab 6
   hosts: localhost
   become: true
   tasks:
     - name: copy journal config file
       copy:
-        src: /etc/systemd/journald.conf
+        src: /root/.journal
         dest: /etc/systemd/journald.conf
         remote_src: yes
 
@@ -13,7 +13,17 @@
       file:
         path: /root/.journal
         state: absent
-
+        
+    - name: Remove journal directory
+      file:
+        path: /var/log/journal
+        state: absent
+        
+    - name: Restart journald
+      service:
+        name: "systemd-journald"
+        state: restarted
+        
     - name: Remove recentlogs file
       file:
         path: /home/vagrant/recentlogs.txt
