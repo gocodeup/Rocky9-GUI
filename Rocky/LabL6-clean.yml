@@ -7,9 +7,7 @@
       file:
         path: /root/.chronycopy
         state: absent
-    - name: Set timezone to America/Chicago
-      timezone:
-        name: America/Chicago
+
     - name: Remove all files in rsyslog directory
       shell: rm -rf /etc/rsyslog.d/*
 
