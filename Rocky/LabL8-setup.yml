@@ -1,5 +1,5 @@
 ---
-- name: This sets up Lab 12
+- name: This sets up Lab 8
   hosts: localhost
   become: true
   tasks:
