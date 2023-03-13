@@ -1,5 +1,5 @@
 ---
-- name: This cleans up Lab 12
+- name: This cleans up Lab 8
   hosts: localhost
   become: true
   tasks:
