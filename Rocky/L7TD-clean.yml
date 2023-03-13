@@ -9,7 +9,7 @@
         state: absent
     - name: remove samba extracted file
       file:
-        path: /home/vagrant/samba-4.17.3
+        path: /home/vagrant/samba-4.18.0
         state: absent
     - name: remove etc tarball
       file:
