@@ -17,9 +17,6 @@
         path: /root/.spool
         state: absent
 
-    - name: Clear at que
-      shell: atrm $(atq | cut -f1)
-
     - name: Remove the KrustyKrab file created
       file:
         path: /home/vagrant/KrustyKrab
