@@ -1,5 +1,5 @@
 ---
-- name: This cleans up Lesson 4 Topic B lab
+- name: This cleans up Lesson 11 Topic C lab
   hosts: localhost
   become: true
   ignore_errors: yes
