@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: make a copy of fstab file
-      copy:
-        src: /etc/fstab
-        dest: /root/.fstabcopy
-        remote_src: yes
+        copy:
+          src: /etc/fstab
+          dest: /root/.fstabcopy
+          remote_src: yes
