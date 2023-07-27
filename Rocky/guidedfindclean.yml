@@ -1,0 +1,31 @@
+---
+- name: This is the cleanup for the guided find lab.
+  hosts: localhost
+  become: true
+  gather_facts: false
+  
+  tasks:
+    - name: Remove the group GalaxyTeam
+      group:
+        name: GalaxyTeam
+        state: absent
+        
+    - name: Remove Moon file
+      file:
+        path: /tmp/Moon
+        state: absent
+
+    - name: Remove Star file
+      file:
+        path: /bin/Star
+        state: absent
+
+    - name: Remove Earth file
+      file:
+        path: /var/log/Earth
+        state: absent
+        
+    - name: Remove Saturn file
+      file:
+        path: /etc/Saturn
+        state: absent
